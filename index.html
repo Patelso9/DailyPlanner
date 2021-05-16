@@ -12,101 +12,27 @@
 </head>
 
 <body>
-
-    <header>
+  <div class= "all">
+    <header class="jumbotron text-center">
         <h1>Daily Planner</h1>
+        <p>It's another beautiful day, schedule your day below</p>
+        <h3><span id="time-display">00:00:00</span></h3>
     </header>
    
-    <table class="table table-bordered col-md-8 offset-md-2">
-        <thead>
-          <tr>
-            <th scope="col">Hour</th>
-            <th class = "col-8" scope="col">Events</th>
-            <th scope="col">Save</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">7am</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">8am</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">9am</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">10am</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">11am</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">12am</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">1pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">2pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">3pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">4pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">5pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">6pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">7pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">8pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
-          <tr>
-            <th scope="row">9pm</th>
-            <td></td>
-            <td><button type="button" class="btn btn-outline-primary">Save</button></td>
-          </tr>
+    <main class="container">
+        <div id="planner"></div>
+    </main>
           
         </tbody>
       </table>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
