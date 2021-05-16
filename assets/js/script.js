@@ -8,16 +8,19 @@ $( document ).ready(function() {
     //loop to dispaly 9am-18pm
       for (var i= 8 ; i<=20; i++){
        
-        // Create row elements
-
+        // create styles for rows & cols
         row = $(`<div class="row">`)
-        col1 = $(`<div class ="col hour">${displayAmorPm(i)}</div>`)
+        col1 = $(`<div class ="col hour">
+                    ${displayAmorPm(i)}
+                    </div>`)
         col2 = $(`<div class ="col-8 inputcontent">
-                    <input data-input="${i}" id="inputText${i}" class="form-control inputText" type="text" name="userInput">
+                    <input data-input="${i}" id="inputTxt${i}" class="form-control inputText" type="text" name="userInput">
                     </div>`)
         col3 = $(`<div class ="col">
                     <button data-id="${i}" id="savePlanner" class="btn btn-success btn-block">
                     <i class="fas fa-save"></i></button></div>`)
+
+        // append to create new rows
         row.append(col1)
         row.append(col2)
         row.append(col3)
@@ -25,52 +28,51 @@ $( document ).ready(function() {
         getlocalStorage(i)
       }
 
-    //   function to enable save button
+    //   function for save button to work
      $("button.btn.btn-success").click(function(e){
      var id = $(this).data("id")
      var inputText = $(this).parent().siblings().find("input").val()
      localStorage.setItem(id,inputText)
      })
     
-     //  Convert Am to Pm
+     //  Convert Am to Pm on table
      function displayAmorPm(hour){
-       var timeOD=""
+       var tod=""
        if(hour<=12){
-         timeOd= "AM"
+         tod= "am"
        }else{
-         timeOd="PM"
+         tod="pm"
        }
        hour = hour % 12
        hour = hour ? hour : 12
-       return hour + " " + timeOd
+       return hour + " " + tod
      }
     });
 
-    // setting up local storage to save text
+    // Set up local storage to save text
      function getlocalStorage(hour){
        var input = localStorage.getItem(hour)
        if(true){
-        //  $("input").data(`input${hour}`)
-        var text= $(`input#inputText${hour}`).val(input)
-        console.log(text)
+        var text= $(`input#inputTxt${hour}`).val(input)
+        // console.log(text)
        }
      }
 
-    //  update color- does not work
+    //  change color of background: before current hour turns light steel blue, current hour turns turquoise
      function updateColor(){
        var hour = new Date().getHours();
-       for (var i= 9 ; i<=18; i++){
-         console.log(hour,i)
-         if(hour==i ) {
-          $(`#inputText${i}`).css("background","red")
-         }else  if(hour<i ){
-          
-           $(`#inputText${i}`).css("background","lightblue")
-  
+       for (var i= 8 ; i<=20; i++){
+        //  console.log(hour,i)
+         if(hour==i) {
+          $(`#inputTxt${i}`).css("background","turquoise")
+         }
+         else  if(hour>i ){
+           $(`#inputTxt${i}`).css("background","lightsteelblue")
          }
        }
      }  
 
+// call the calender to run
 setInterval(function(){
     updateColor()
 },1000);
