@@ -1,19 +1,12 @@
-// var timeDisplayEl = $('#display-time');
-
-// function displayTime() {
-//     var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
-//     timeDisplayEl.text(rightNow);
-//   }
-
 $( document ).ready(function() {
 
 // display current date & time
-    var time= moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+    var time= moment().format('MMM DD, YYYY [@] hh:mm:ss a');
     $('#time-display').text(time);
 
     var row = ""
     //loop to dispaly 9am-18pm
-      for (var i= 9 ; i<=24; i++){
+      for (var i= 8 ; i<=20; i++){
        
         // Create row elements
 
@@ -24,7 +17,7 @@ $( document ).ready(function() {
                     </div>`)
         col3 = $(`<div class ="col">
                     <button data-id="${i}" id="savePlanner" class="btn btn-success btn-block">
-                    <i class="fas fa-save"></i> Save</button></div>`)
+                    <i class="fas fa-save"></i></button></div>`)
         row.append(col1)
         row.append(col2)
         row.append(col3)
@@ -55,31 +48,29 @@ $( document ).ready(function() {
 
     // setting up local storage to save text
      function getlocalStorage(hour){
-       let inputval = localStorage.getItem(hour)
+       var input = localStorage.getItem(hour)
        if(true){
         //  $("input").data(`input${hour}`)
-        var text= $(`input#inputText${hour}`).val(inputval)
+        var text= $(`input#inputText${hour}`).val(input)
         console.log(text)
        }
      }
 
-    // //  update color- does not work
-    //  function updateColor(){
-    //    var hour = new Date().getHours();
-    //    for (var i= 9 ; i<=18; i++){
-    //      console.log(hour,i)
-    //      if(hour==i ) {
-    //       $(`#inputText${i}`).css("background","red")
-    //      }else  if(hour<i ){
+    //  update color- does not work
+     function updateColor(){
+       var hour = new Date().getHours();
+       for (var i= 9 ; i<=18; i++){
+         console.log(hour,i)
+         if(hour==i ) {
+          $(`#inputText${i}`).css("background","red")
+         }else  if(hour<i ){
           
-    //        $(`#inputText${i}`).css("background","lightblue")
+           $(`#inputText${i}`).css("background","lightblue")
   
-    //      }
-    //    }
-    //  }  
+         }
+       }
+     }  
 
 setInterval(function(){
-
+    updateColor()
 },1000);
-
-setInterval(displayTime,1000);

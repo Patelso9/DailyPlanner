@@ -1,17 +1,4 @@
-
-
-
-body{
-    text-align: center;
-    color: darkslateblue;
-    background-color: rgb(116, 135, 158);
+.jumbotron{
+    background-color: darkslateblue;
+    color: whitesmoke;
 }
-
-thead{
-    background-color: rgba(127, 255, 212, 0.493);
-}
-
-tbody{
-    background-color: rgba(135, 206, 250, 0.267);
-}
-
