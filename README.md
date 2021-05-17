@@ -2,6 +2,12 @@
 
 ------NOT FINAL----------
 
+## Links
+
+Git site: https://patelso9.github.io/DailyPlanner/
+
+Git repo: https://github.com/Patelso9/DailyPlanner
+
 
 ## Your Task
 
