@@ -1,7 +1,14 @@
 # DailyPlanner
 
-------NOT FINAL----------
+## Contents of project
+This project contains an index.html file, script.js file, and style.css file. To preview the project, click the link next to the description.
 
+
+## Links
+
+Git site: https://patelso9.github.io/DailyPlanner/
+
+Git repo: https://github.com/Patelso9/DailyPlanner
 
 ## Your Task
 
@@ -35,6 +42,18 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
-The following animation demonstrates the application functionality:
+## Satisfying the Acceptance Criteria
 
-![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
+When opening the daily calender, the current day is displayed on the top of the calendr. 
+When scrlling down, the calender presents timeblocks for standard (and extended) buisness hours (8am-8pm). 
+
+Each timeblock is color coded per time of day. Current hour's event box is colored turquoise. Past hours appear gray. 
+
+Input text is able to be saved into each container and viewed after clicking the save button- which saves it to local storage. 
+
+## Future Developments
+Style can be updated to be more inviting. Insert a line that hovers over the time of day on the calender. 
+
+Update jumbotron to inlude weather and live time. 
+
+Clear out the contents of the planner each day to start each day with a blank slate.  
