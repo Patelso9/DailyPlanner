@@ -51,9 +51,13 @@ Each timeblock is color coded per time of day. Current hour's event box is color
 
 Input text is able to be saved into each container and viewed after clicking the save button- which saves it to local storage. 
 
+## Image
+<img src="./assets/img/ss.png">
+
 ## Future Developments
 Style can be updated to be more inviting. Insert a line that hovers over the time of day on the calender. 
 
 Update jumbotron to inlude weather and live time. 
 
 Clear out the contents of the planner each day to start each day with a blank slate.  
+
