@@ -1,8 +1,12 @@
 .jumbotron{
     background-color: darkslateblue;
     color: whitesmoke;
-}
+};
 
 #savePlanner{
     background-color: teal;
-}
+};
+
+.past{};
+.present{};
+.future{};
