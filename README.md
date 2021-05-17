@@ -3,6 +3,12 @@
 ## Contents of project
 This project contains an index.html file, script.js file, and style.css file. To preview the project, click the link next to the description.
 
+## Links
+
+Git site: https://patelso9.github.io/DailyPlanner/
+
+Git repo: https://github.com/Patelso9/DailyPlanner
+
 
 ## Links
 
@@ -42,6 +48,7 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+<<<<<<< HEAD
 ## Satisfying the Acceptance Criteria
 
 When opening the daily calender, the current day is displayed on the top of the calendr. 
