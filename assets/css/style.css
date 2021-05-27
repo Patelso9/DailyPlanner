@@ -1,12 +1,24 @@
+body{
+    background-color: rgba(228, 208, 252, 0.589);
+}
+
+
 .jumbotron{
     background-color: darkslateblue;
     color: whitesmoke;
 };
 
-#savePlanner{
-    background-color: teal;
+button{
+    color: purple
 };
 
-.past{};
-.present{};
-.future{};
+.userInput{
+    background-color: rgba(112, 128, 144, 0.466);
+};
+.present{
+    background-color: rgba(175, 238, 238, 0.5);
+};
+.future{
+    background-color: whitesmoke;
+};
+
